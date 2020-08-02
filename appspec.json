@@ -1,0 +1,17 @@
+{
+  "version": 0,
+  "Resources": [
+    {
+      "TargetService": {
+        "Type": "AWS::ECS::Service",
+        "Properties": {
+          "TaskDefinition": "arn:aws:ecs:us-east-1:033484327401:task-definition/Cyberdude-app:5",
+          "LoadBalancerInfo": {
+            "ContainerName": "nginx",
+            "ContainerPort": 80
+          }
+        }
+      }
+    }
+  ]
+}
