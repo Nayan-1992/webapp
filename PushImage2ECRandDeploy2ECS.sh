@@ -1,3 +1,4 @@
+#!/bin/sh
 #Create image by updating he latest code from git and push it to ECR
 #It uses Dockerfile provided in github repository, must be on root of repository
 echo Logging in to Amazon ECR...
