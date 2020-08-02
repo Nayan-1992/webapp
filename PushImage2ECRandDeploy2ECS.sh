@@ -18,4 +18,4 @@ TASK_DEF=$(aws ecs describe-task-definition --task-definition "Cyberdude-app")
 CONTAINER_DEFS=$(echo $TASK_DEF | jq '.taskDefinition.containerDefinitions' | awk -v ORS= -v OFS= '{$1=$1}1')
 #creates a new task definition from the previous definition details
 aws ecs register-task-definition --family "Cyberdude-app" --container-definitions $CONTAINER_DEFS
-aws ecs update-service --cluster dino-test-qa-system --service webapp --task-definition Cyberdude-app
+aws ecs update-service --cluster CyberDue-App --service CyberDue-Service --task-definition Cyberdude-app
